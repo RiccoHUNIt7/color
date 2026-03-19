@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Színmemória</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Szinmemoria jatek</title>
 </head>
 <body>
-    <h1>Szinmemoria jatek</h1>
-    <p id="level">Szint:</p>
-    <div id="red"></div>
-    <div id="blue"></div>
-    <div id="green"></div>
-    <div id="yellow"></div>
+    <h1>Színmemória játék</h1>
+    <h2>Szint: <span id="levelSpan">0</span></h2>
+    <div id="gameHolder">
+        <div class="colourSquare" id="red"></div>
+        <div class="colourSquare" id="blue"></div>
+        <div class="colourSquare" id="green"></div>
+        <div class="colourSquare" id="yellow"></div>
+    </div>
+    <button id="startButton">Start</button>
 </body>
 </html>
