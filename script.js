@@ -2,7 +2,8 @@ const red = document.getElementById("red");
 const blue = document.getElementById("blue");
 const green = document.getElementById("green");
 const yellow = document.getElementById("yellow");
-const level = document.getElementById("level");
+const level = document.getElementById("levelSpan");
+const startButton = document.getElementById("startButton");
 
 const colors = [red, blue, green, yellow];
 let sequence = [];
@@ -14,9 +15,10 @@ function startGame() {
     currentLevel = 0;
     nextLevel();
 }
+startButton.addEventListener("click", startGame);
 function nextLevel() {
     currentLevel++;
-    level.textContent = `Szint: ${currentLevel}`;
+    level.textContent = `${currentLevel}`;
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     sequence.push(randomColor);
     showSequence();
@@ -59,4 +61,4 @@ function handleUserInput(event) {
         }
     }
 }
-startGame();
+
